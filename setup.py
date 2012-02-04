@@ -11,12 +11,7 @@ data = dict(
     author='Tim Ansell',
     author_email='mithro@mithis.com',
     packages=['datetime_tz'],
-    install_requires=['pytz'],
+    install_requires=['pytz', 'python-dateutil'],
 )
-
-if sys.version[:3] < '3.0':
-    data['install_requires'].append('python.dateutil == 1.5')
-else:
-    data['install_requires'].append('python.dateutil == 2.0')
 
 setup(**data)
